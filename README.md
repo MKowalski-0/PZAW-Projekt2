@@ -1,0 +1,1 @@
+Jest to drugi projekt zaliczeniowy DJANGO
