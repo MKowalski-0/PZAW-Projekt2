@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Keto & Paleo Recipes{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'przepisowo/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Strona główna</a>
+        <a href="{% url 'recipe_list' %}">Przepisy</a>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'przepisowo/base.html' %}
+
+{% block title %}Witamy!{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Zdrowe przepisy na każdą okazję!</h1>
+    <p>Odkryj pyszne i zdrowe przepisy keto i paleo.</p>
+    <a href="{% url 'recipe_list' %}" class="button">Zobacz przepisy</a>
+</div>
+{% endblock %}
