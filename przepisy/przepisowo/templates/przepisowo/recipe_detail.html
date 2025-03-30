@@ -1,0 +1,32 @@
+{% extends 'przepisowo/base.html' %}
+
+{% block title %}{{ recipe.name }}{% endblock %}
+
+{% block content %}
+<h2>{{ recipe.name }}</h2>
+<img src="{{ recipe.image.url }}" alt="{{ recipe.name }}">
+<p>{{ recipe.category }}</p>
+<p>Cena: {{ recipe.price }} zł</p>
+<p>Czas przygotowania: {{ recipe.preparation_time }} min</p>
+
+<h3>Komentarze:</h3>
+{% for comment in comments %}
+    <div>
+        <strong>{{ comment.user.username }}</strong>
+        <p>{{ comment.text }}</p>
+        <small>{{ comment.created_at }}</small>
+    </div>
+{% endfor %}
+
+{% if user.is_authenticated %}
+    <h3>Dodaj komentarz:</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Dodaj komentarz</button>
+    </form>
+{% else %}
+    <p>Aby dodać komentarz, musisz się <a href="{% url 'login' %}">zalogować</a>.</p>
+{% endif %}
+
+{% endblock %}
