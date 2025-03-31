@@ -5,27 +5,35 @@
 *.pyo
 *.pyd
 __pycache__/
-
-# Virtual environment
-venv/
-.env
-
-# Django stuff
 *.sqlite3
 db.sqlite3
 /media/
-/staticfiles/
+staticfiles/
+.env
+SECRET_KEY
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
 
 # VS Code
 .vscode/
-
-# MacOS
-.DS_Store
 
 # PyCharm
 .idea/
 *.iml
 
-# Migrations
-*/migrations/*
-!*/migrations/__init__.py
+# JetBrains
+*.ipr
+*.iws
+
+# MacOS
+.DS_Store
+
+# Linux
+*~ 

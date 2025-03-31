@@ -34,7 +34,15 @@ nav a {
 }
 
 .recipe-card img {
-    width: 100%;
-    height: auto;
+    width: 300px;   /* Stała szerokość zdjęcia */
+    height: 300px;  /* Stała wysokość zdjęcia */
+    object-fit: cover;  /* Utrzymuje proporcje, ale wypełnia całą przestrzeń */
     border-radius: 5px;
 }
+
+textarea{
+    resize: none;
+}
+
+
+ 
