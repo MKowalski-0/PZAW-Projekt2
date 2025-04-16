@@ -10,6 +10,7 @@ class Recipe(models.Model):
     image = models.ImageField(upload_to='recipe_images/')
     price = models.DecimalField(max_digits=6, decimal_places=2)
     preparation_time = models.PositiveIntegerField()
+    preparation_method = models.CharField(max_length=2000, default="")
 
     def save(self, *args, **kwargs):
         #Skalowanie obrazu przed zapisaniem
