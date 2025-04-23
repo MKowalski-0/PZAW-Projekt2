@@ -10,6 +10,6 @@ Aby dodać przepis należy stworzyć superużytkownika za pomocą komendy:
 `python manage.py createsuperuser`
 
 Strona może wymagać migracji po sklonowaniu z githuba
-`pyhon ./manage.py migrate`
+`python ./manage.py migrate`
 
 
