@@ -1,5 +1,8 @@
 Jest to drugi projekt zaliczeniowy DJANGO
 
+Strona to swego rodzaju blog. Na którym jako admin strony można dodawać przepisy.
+Użytkownicy również mogą zostawiać komentarze pod przepisem.
+
 Jest możliwość że będzie trzeba pobrać kilka rzeczy:
 
 Pillow:
